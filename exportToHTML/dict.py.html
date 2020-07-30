@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>dict.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+.s4 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+dict.py</font>
+</center></td></tr></table>
+<pre><span class="s0">#key value pair</span>
+<span class="s0"># dict = {'mehek':1,'Anya':2,'shera':3}</span>
+<span class="s0"># print(dict['mehek'])</span>
+<span class="s0"># dict['stef'] = 4</span>
+<span class="s0"># print(dict['stef'])</span>
+<span class="s0"># dict['stef']=5</span>
+<span class="s0"># print(dict['stef'])</span>
+
+<span class="s0">#histogram - count the word number of times it appeared</span>
+<span class="s0"># counts = dict()</span>
+<span class="s0"># names = ['anya','stef','rina','rina','rina','stef']</span>
+<span class="s0"># for name in names:</span>
+<span class="s0">#     if name not in counts:</span>
+<span class="s0">#         counts[name]=1</span>
+<span class="s0">#     else:</span>
+<span class="s0">#         counts[name] = counts[name]+1</span>
+<span class="s0"># print(counts)</span>
+
+<span class="s0">#with get word</span>
+<span class="s0"># counts = dict()</span>
+<span class="s0"># names = ['anya','stef','rina','rina','rina','stef']</span>
+<span class="s0"># for name in names:</span>
+<span class="s0">#     counts[name]=counts.get(name,0)+1</span>
+<span class="s0"># print(counts)</span>
+
+<span class="s0"># # count the words in given text</span>
+<span class="s0"># counts = dict()</span>
+<span class="s0"># line = input(&quot;Enter a text&quot;)</span>
+<span class="s0"># words = line.split()</span>
+<span class="s0"># for word in words:</span>
+<span class="s0">#     counts[word] = counts.get(word,0)+1</span>
+<span class="s0"># print(counts)</span>
+
+<span class="s0">#get the keys and values</span>
+<span class="s1">dict = {</span><span class="s2">'mehek'</span><span class="s1">:</span><span class="s3">1</span><span class="s4">,</span><span class="s2">'Anya'</span><span class="s1">:</span><span class="s3">2</span><span class="s4">,</span><span class="s2">'shera'</span><span class="s1">:</span><span class="s3">3</span><span class="s1">}</span>
+<span class="s1">print(dict.keys())</span>
+<span class="s1">print(dict.values())</span>
+
+<span class="s4">for </span><span class="s1">a</span><span class="s4">,</span><span class="s1">b </span><span class="s4">in </span><span class="s1">dict.items():</span>
+    <span class="s1">print(a</span><span class="s4">,</span><span class="s1">b)</span>
+
+<span class="s1">lis = [</span><span class="s3">1</span><span class="s4">,</span><span class="s3">2.3</span><span class="s4">,</span><span class="s2">'anya'</span><span class="s1">]</span>
+<span class="s1">print(lis)</span></pre>
+</body>
+</html>

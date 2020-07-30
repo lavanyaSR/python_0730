@@ -1,0 +1,221 @@
+<html>
+<head>
+<title>functions.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+.s5 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+functions.py</font>
+</center></td></tr></table>
+<pre><span class="s0">'''def thing(): 
+    print(&quot;Hello&quot;) 
+    print(&quot;There&quot;) 
+ 
+thing() 
+print(&quot;Zen&quot;) 
+thing() 
+ 
+big = max(&quot;Hello world&quot;) 
+print(big) 
+big = min(&quot;Hello world&quot;) 
+print(big) 
+ 
+def greet(lang): 
+    if lang == &quot;eng&quot;: 
+        print(&quot;Hello&quot;) 
+    elif lang == &quot;fran&quot;: 
+        print(&quot;Bon&quot;) 
+    elif lang == &quot;hin&quot;: 
+        print(&quot;Namaskar&quot;) 
+greet('eng') 
+greet('hin') 
+ 
+def talk(): 
+    return(&quot;Hello&quot;) 
+ 
+print(talk(),&quot;Sravi&quot;) 
+ 
+def tell(lan): 
+    if lan == 'en': 
+        return &quot;Hello&quot; 
+    elif lan == 'fr': 
+        return 'Bonjour' 
+    else: 
+        return 'Namasthe' 
+print(tell('en'),'Sravi') 
+print(tell('et'),'anya') 
+ 
+def yell(a,b): 
+    addend = a+b 
+    return addend 
+print(yell(3,4))'''</span>
+
+<span class="s2">'''while True: 
+    line = input('&gt; ') 
+    if line == 'done': 
+        break 
+    print(line) 
+print('Done! ') 
+ 
+while True: 
+    line = input('&gt; ') 
+    if line[0] == '#': 
+        continue 
+    elif line == 'done': 
+        break 
+    print(line) 
+print(&quot;Done!&quot;) 
+ 
+#finding maximum number 
+large = 0 
+#gen = ['1','45','67'] 
+for i in [1,23,45,65]: 
+    if i &gt; large: 
+        large = i 
+print(&quot;max number &quot;,large) 
+ 
+#sum of all variables 
+zen = 0 
+for j in [23,34,45,56]: 
+    zen = zen + j 
+    print(j,zen) 
+print(zen) 
+ 
+#loop in a loop 
+for i in [12,23,34,67]: 
+    if i &gt; 40: 
+        print(i) 
+ 
+#finding minimum number - diff between == and is is: will check not only value but type also.  
+#use is on boolean and none type 
+smallest = None 
+for i in [100,3,5,7,10]: 
+    if smallest is None: 
+        smallest = i 
+    elif i &lt; smallest: 
+        smallest = i 
+    #print(smallest) 
+print(smallest) 
+ 
+biggest = None 
+for i in [100,3,5,7,10]: 
+    if biggest == None: 
+        biggest = i 
+    elif i &gt; biggest: 
+        biggest = i 
+    #print(smallest) 
+print(biggest) 
+ 
+small = 0 
+#gen = ['1','45','67'] 
+for i in [-1,23,45,65]: 
+    if i &lt; small: 
+        small = i 
+print(&quot;max number &quot;,small) 
+ 
+# Strings 
+fruit = 'apple' 
+for i in fruit: 
+    print(i,end ='') 
+ 
+x = input(&quot;Enter char to search for&quot;) 
+fruit = 'apple' 
+for i in fruit: 
+    if x in fruit: 
+        pass 
+print(&quot;success&quot;) 
+#make upper/ lower 
+print(fruit.upper()) 
+#slicing 
+print(fruit[1:3]) 
+#find method 
+fruit = 'Apple' 
+print(fruit.find('ap')) 
+print(fruit.find('Ap')) 
+#replace 
+rep = fruit.replace('Ap','Ba') 
+print(rep) 
+print(fruit) 
+#white space 
+veg = '   Tindora   ' 
+print(veg) 
+rt = veg.rstrip() 
+print(rt) 
+rt = veg.lstrip() 
+print(rt) 
+rt = veg.strip() 
+print(rt) 
+#startswith 
+there = &quot;once upon a time&quot; 
+print(there.startswith(&quot;once&quot;))  
+ 
+data = &quot;from stephen.com@claires Sat Jun 5 10:10:10 2008&quot; 
+test = data.find('@') 
+print(test) 
+spos = data.find(&quot; &quot;,test) 
+print(spos) 
+print(data[test+1:spos]) 
+ 
+fpos = data.find('f') 
+print(fpos) 
+sepos = data.find(' ',fpos) 
+print(sepos) 
+tpos = data.find('.',sepos) 
+print(tpos) 
+print(data[sepos+1:tpos])   
+ 
+sh = input(&quot;enter hours&quot;) 
+sr = input(&quot;enter rate&quot;) 
+fh = float(sh) 
+fr = float(sr) 
+ 
+def computepay(hour, rate): 
+    if hour &gt; 40: 
+        reg = hour * rate 
+        otp = (hour - 40) * (rate * 0.5) 
+        pay = reg + otp 
+    else: 
+        pay = hour * rate 
+    return pay 
+xp = computepay(fh,fr) 
+print(xp)  '''</span>
+
+<span class="s3"># finding max and min numbers from user input</span>
+
+<span class="s1">num = </span><span class="s4">0</span>
+<span class="s1">smallest = </span><span class="s5">None</span>
+<span class="s1">biggest = -</span><span class="s4">1</span>
+<span class="s5">while True</span><span class="s1">:</span>
+    <span class="s1">num = input(</span><span class="s2">&quot;enter numbers&quot;</span><span class="s1">)</span>
+    <span class="s5">if </span><span class="s1">num == </span><span class="s2">'Done'</span><span class="s1">:</span>
+        <span class="s5">break</span>
+    <span class="s5">try</span><span class="s1">:</span>
+        <span class="s1">numb = int(num)</span>
+    <span class="s5">except</span><span class="s1">:</span>
+        <span class="s1">print(</span><span class="s2">&quot;invalid number&quot;</span><span class="s1">)</span>
+    <span class="s5">if </span><span class="s1">smallest </span><span class="s5">is None</span><span class="s1">:</span>
+        <span class="s1">smallest = numb</span>
+    <span class="s5">elif </span><span class="s1">numb &lt; smallest:</span>
+        <span class="s1">smallest = numb</span>
+    <span class="s5">elif </span><span class="s1">numb &gt; biggest:</span>
+        <span class="s1">biggest = numb</span>
+<span class="s1">print(</span><span class="s2">&quot;smallest &quot;</span><span class="s5">,</span><span class="s1">smallest)</span>
+<span class="s1">print(</span><span class="s2">&quot;Biggest&quot;</span><span class="s5">,</span><span class="s1">biggest)</span>
+
+
+
+
+
+</pre>
+</body>
+</html>
